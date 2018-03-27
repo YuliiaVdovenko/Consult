@@ -1,0 +1,122 @@
+
+//---------- Single POst --------------
+.main {
+  padding-top: 4rem;
+  .single-content {
+    padding: 4rem 0;
+    p {
+      line-height: 3rem;
+    }
+  }
+}
+
+
+.comments-list {
+	border-top: 1px solid $back-grey;
+	padding: 2rem 0;
+	h2 {
+		display: inline-block;
+		color: $primary;
+		font-size: 1.8rem;
+		text-transform: uppercase;
+		margin: 1rem 0;
+	}
+}
+
+.avatar {
+	img {
+		width: 50px;
+		max-width: 50px;
+	}
+}
+
+.comments-text {
+	padding-left: 1rem;
+	width: 100%;
+	p {
+		font-size: 1.5rem;
+		color: $black;
+		line-height: 2rem;
+		padding: 0.5rem 0;
+	}
+	.comment-author {
+		display: flex;
+		justify-content: space-between;
+		flex-flow: wrap;
+		a {
+			font-size: 1.5rem;
+			font-weight: bold;
+			color: $black;
+			&.comment-reply-link {
+				padding: 0.5rem 2rem;
+				background-color: $green;
+				color: $white;
+				border-radius: 2rem;
+			}
+		}
+	}
+}
+
+.comment-list {
+	padding-top: 2rem;
+	.children {
+		padding-left: 3rem;
+	}
+}
+
+//---------------- Leave Comment Form --------------------
+
+.leave-comment-form {
+	input, textarea {
+		font-size: 2rem;
+		color: $black;
+		padding-top: 1.5rem;
+	}
+	input:focus, textarea:focus {
+		box-shadow: none;
+	}
+}
+.form-submit {
+	.comment-button {
+		line-height: 1.7rem;
+		background-color: $green;
+		color: $white;
+		cursor: pointer;
+		padding: 1rem;
+		float: right;
+		border: none;
+	}
+}
+
+
+.leave-comment-title {
+	display: inline-block;
+	color: $black;
+	font-size: 1.8rem;
+	text-transform: uppercase;
+	margin: 3rem 0;
+}
+.comment-reply-title {
+	font-size: 1.8rem;
+	text-transform: uppercase;
+	margin: 3rem 0;
+	a:link, a:visited {
+		display: inline-block;
+		color: $primary;
+		font-size: 1.5rem;
+		text-transform: none;
+		background-color: $second-color;
+		padding: 1rem 2rem;
+	}
+	a:hover {
+		color: $second-color;
+		background-color: $primary;
+	}
+}
+
+.recent {
+	margin-bottom: 2rem;
+	img {
+		width: 100%;
+	}
+}

@@ -1,0 +1,153 @@
+//-----------------------Blog page Style -----------------------
+
+
+.date-header {
+	position: absolute;
+	bottom: 0;
+}
+.blog-name {
+	color: $black;
+	font-size: 4rem;
+	font-weight: 300;
+	line-height: 3rem;
+	text-transform: uppercase;
+	padding: 10rem 0;
+}
+
+.blog-date {
+	color: $white;
+	line-height: 3rem;
+	text-transform: uppercase;
+	padding: 0.5rem 1rem;
+	display: inline-block;
+}
+
+.post-list {
+	padding-bottom: 4rem;
+	padding-top: 4rem;
+	li {
+		padding: 2rem 0;
+		border-bottom: 1px solid $text-color;
+	}
+}
+
+.image-post-title {
+	position: relative;
+	img {
+		width: 100%;
+	}
+	.blog-date {
+		background-color: $primary;;
+	}
+	.blog-date:hover {
+		color: $primary;
+		background-color: $black;
+	}
+	.img-title {
+		color: $white;
+		font-weight: 700;
+		text-transform: uppercase;
+		background-color: $black;
+		padding: 0.5rem 1rem;
+		margin: 0;
+	}
+}
+
+.excerpt-text {
+	padding-top: 2rem;
+	.blog-date {
+		color: $text-color;
+	}
+	.blog-date:hover {
+		color: $primary;
+	}
+	.excerpt-btn {
+		width: 50%;
+		display: inline-block;
+		a {
+			background-color: $green;
+			color: $white;
+			text-transform: uppercase;
+			border: none;
+			border-radius: 3rem;
+			padding: 0.5rem 1rem;
+			display: inline-block;
+		}
+	}
+	.addtoany_content {
+		margin: 0;
+		a > span:hover {
+			color: $primary;
+		}
+	}
+}
+
+.audio {
+	.wp-playlist-current-item {
+		display: none;
+	}
+	.wp-playlist-playing {
+		display: none;
+	}
+	.wp-playlist {
+		border: none;
+		margin: 0;
+	}
+	.mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-total,
+	.mejs-controls .mejs-time-rail .mejs-time-total {
+		background-color: $white;
+	}
+	.mejs-time-current, .mejs-time-hovered .negative .no-hover {
+		background-color: $primary !important;
+	}
+	.mejs-container, .mejs-container .mejs-controls,
+	.mejs-embed, .mejs-embed body {
+		background-color: $back-grey;
+	}
+	.mejs-controls a.mejs-horizontal-volume-slider {
+		display: none;
+	}
+	.mejs-duration, .mejs-currenttime, .mejs-horizontal-volume-total {
+		display: none;
+	}
+}
+
+.quote > p:first-child {
+	background-color: $second-color;
+	color: $white;
+	padding: 3rem;
+	display: inline-flex;
+	&:before {
+		content: '\201C';
+		font-size: 7rem;
+	}
+	&:after {
+		content: '\201D';
+		font-size: 7rem;
+	}
+}
+
+//---------Pagination --------------------
+
+.nav-links {
+	padding-bottom: 3rem;
+	span {
+		font-size: 2rem;
+		padding: 1rem 2rem;
+		background-color: $primary;
+		color: $white;
+		display: inline-block;
+	}
+	a {
+		font-size: 2rem;
+		line-height: 2rem;
+		padding: 1rem 2rem;
+		background-color: $primary;
+		color: $white;
+		display: inline-block;
+		margin: 0 1rem;
+	}
+	.next, .prev {
+		display: none;
+	}
+}

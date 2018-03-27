@@ -1,0 +1,30 @@
+html {
+  font-family: ProximaNova-Regular;
+  font-size: 10px;
+}
+
+span, p, i, time, address, label, input {
+  font-weight: 400;
+  font-family: ProximaNova-Regular;
+  font-size: 1.4rem;
+  line-height: 2rem;
+}
+h2, h3, h4, h5 {
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 3rem;
+  margin: 0;
+}
+a:link, a:visited, a:hover {
+  text-decoration: none;
+  font-family: ProximaNova-Regular;
+  font-size: 1.4rem;
+  line-height: 2rem;
+}
+
+li{
+  list-style-type:none;
+}
+ul {
+  padding: 0;
+}

@@ -1,0 +1,298 @@
+
+//---------------- Welcome section -------------------
+
+p {
+  color: $black;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 2rem;
+}
+
+.title {
+  p {
+    color: $black;
+    font-size: 3rem;
+    font-weight: bold;
+    line-height: 3rem;
+    text-transform: uppercase;
+    span {
+      color: $text-color;
+      font-size: 1.4rem;
+      font-weight: 400;
+    }
+  }
+}
+
+.read-more {
+  color: $white;
+  background-color: $green;
+  padding: 0.5rem 2.5rem;
+  font-size: 1.3rem;
+  font-weight: 400;
+  line-height: 3rem;
+  text-transform: uppercase;
+  border-radius: 3rem;
+  display: inline-block;
+  margin-bottom: 2rem;
+}
+.read-more:hover {
+  background-color: $primary;
+  color: $white;
+}
+
+//------------------- Slider Section -----------------
+
+
+.carousel-item {
+  margin: 0;
+}
+
+.slider {
+  padding: 10rem 5rem 0 5rem;
+  .industry-list {
+    background-color: $second-color;
+    padding: 0;
+  }
+  .slider-item {
+    padding: 0;
+    border-bottom: 1px solid $white;
+    @media (min-width: 768px) {
+      border-right: 1px solid $white;
+    }
+  }
+  .slider-item:nth-child(2), .slider-item:nth-child(4) {
+    border-right: none;
+  }
+  .slider-item:nth-child(5) {
+    border-bottom: none;
+  }
+  .slider-item:last-child {
+    text-align: center;
+    border: none;
+  }
+  .text {
+    background-color: $primary;
+    padding: 2rem;
+  }
+  .slider-title {
+    color: $white;
+    font-size: 1.3rem;
+    line-height: 3rem;
+    text-transform: uppercase;
+    font-weight: 300;
+  }
+  .slider-subtitle {
+    color: $white;
+    font-size: 3rem;
+    line-height: 3rem;
+    text-transform: uppercase;
+    font-weight: 400;
+  }
+  a {
+    display: block;
+    padding: 2rem;
+    color: $white;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 3rem;
+    text-transform: uppercase;
+    i {
+      color: $white;
+      font-size: 2rem;
+    }
+  }
+  a:hover{
+    background-color: #206aab;
+  }
+  .more {
+    @extend .read-more;
+    @media (min-width: 768px) {
+      margin-bottom: 0;
+    }
+  }
+  .more:hover {
+    background-color: $primary;
+  }
+}
+
+//---------------Section About Us --------------
+
+.about-section{
+  padding: 5rem 0;
+  .about-text {
+    text-align: right;
+  }
+}
+
+//--------------------- Steps Section --------------------
+
+.offer-section {
+  background-color: $back-grey;
+  padding: 4rem 0;
+  img {
+    display: block;
+    padding: 2rem 0;
+  }
+  .image-offer {
+    .step {
+      color: $green;
+      font-size: 2rem;
+      font-weight: 400;
+      line-height: 3rem;
+      text-transform: uppercase;
+    }
+    h3 {
+      font-weight: bold;
+      padding-bottom: 1rem;
+    }
+  }
+  .image-offer:last-child {
+    img {
+      padding-bottom: 1rem;
+    }
+  }
+}
+
+// ------------------- Clients Slider -----------------
+.clients-slider {
+  padding: 5rem 0;
+  background-color: $second-color;
+  color: $white;
+  .title {
+    p {
+      color: $white;
+      span {
+        color: $white;
+      }
+    }
+  }
+  .slider-for {
+    padding-top: 3rem;
+    .item {
+      display: flex;
+      align-items: center;
+      p {
+        color: $white;
+        display: inline-block;
+        padding: 1rem;
+      }
+    }
+    .slick-slide:before {
+      content: "\201C";
+      display: inline-block;
+      color: $white;
+      font-size: 10rem;
+      font-family: "Open Sans", sans-serif;
+    }
+    .slick-slide:after {
+      @extend .slick-slide:before;
+      content: "\201D";
+    }
+  }
+
+  .slider-nav {
+    .slick-dots {
+      li.slick-active button:before {
+        color: $white;
+        font-size: 1rem;
+      }
+    }
+    .slick-list {
+      width: 100%;
+      padding: 0!important;
+      @media (min-width: 993px) {
+        width: 50%;
+      }
+    }
+    .slick-next:before, .slick-prev:before {
+      display: none;
+    }
+    .slick-arrow {
+      display: none!important;
+    }
+  }
+  .slick-slide {
+    opacity:0.5;
+  }
+  .slick-current {
+    opacity: 1;
+  }
+  .slick-slide:focus {
+    outline: 0!important;
+  }
+}
+
+//--------------Our Blog Section -----------------
+
+.featured-post {
+  padding-top: 2rem;
+  li {
+    padding-bottom: 1rem;
+  }
+  a, time {
+    line-height: 1rem;
+  }
+  .title {
+    padding-bottom: 1rem;
+  }
+}
+.blog-section {
+  background-color: $back-grey;
+}
+.blog-check {
+  font-size: 1.2rem;
+  padding: 0.5rem 1rem;
+  border: 2px solid $text-color;
+  color: $text-color;
+  border-radius: 2rem;
+  margin-left: 2rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+.blog-check:hover {
+  border: 2px solid $primary;
+  color: $primary;
+}
+.blog-check-1 {
+  padding: 0.5rem 3.5rem;
+}
+.blog-title {
+  color: $black;
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 3rem;
+  text-transform: uppercase;
+  letter-spacing: -0.9px;
+}
+.blog-time {
+  color: $green;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 3rem;
+}
+
+
+//----------Contact Section --------------
+
+
+.contact-element {
+  padding: 2rem 3rem;
+  border: 1px solid $text-color;
+}
+.contact-info {
+  padding-left: 5rem;
+}
+.label {
+  color: $black;
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 3rem;
+  text-transform: uppercase;
+  letter-spacing: -0.9px;
+}
+.contact-a {
+  color: $black;
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 3rem;
+}
