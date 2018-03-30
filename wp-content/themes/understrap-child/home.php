@@ -89,7 +89,7 @@ $container = get_theme_mod('understrap_container_type'); ?>
 								</div>
 							</li>
 						<?php } ?>
-				<?php endwhile; // end of the loop. ?>
+				<?php endwhile;?>
 			</ul>
 
 			<div class="my-pagination">

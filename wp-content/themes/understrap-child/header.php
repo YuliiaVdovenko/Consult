@@ -47,7 +47,7 @@ $container = get_theme_mod('understrap_container_type');
 
 	<div class="wrapper-fluid wrapper-navbar" id="wrapper-navbar">
 
-		<a class="skip-link screen-reader-text sr-only" href="#content"><?php esc_html_e('Skip to content',
+		<a class="skip-link screen-reader-text sr-only" href="#"><?php esc_html_e('Skip to content',
                 'understrap'); ?></a>
 
 
@@ -81,14 +81,14 @@ $container = get_theme_mod('understrap_container_type');
 
                 <?php } else {
                     the_custom_logo();
-                } ?><!-- end custom logo -->
+                } ?>
 
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
 						aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
 				</button>
 
-				<!-- The WordPress Menu goes here -->
+
                 <?php wp_nav_menu(
                     array(
                         'theme_location' => 'primary',
@@ -101,11 +101,11 @@ $container = get_theme_mod('understrap_container_type');
                     )
                 ); ?>
                 <?php if ('container' == $container) : ?>
-			</div><!-- .container -->
+			</div>
         <?php endif; ?>
 
 
-		</nav><!-- .site-navigation -->
+		</nav>
 
-	</div><!-- .wrapper-navbar end -->
+	</div>
 </div>

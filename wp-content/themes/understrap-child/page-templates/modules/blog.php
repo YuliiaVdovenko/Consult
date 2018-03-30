@@ -1,34 +1,21 @@
 <?php
 $container = get_theme_mod('understrap_container_type'); ?>
 
-<section class="blog-section"
-			style="background-image: url(<?= get_sub_field('blog_image') ?>);
-					background-repeat: no-repeat; background-size: contain; background-position: right center;">
+<section class="blog-section">
 
-	<div class="<?php echo esc_attr( $container ); ?> d-flex flex-wrap align-items-center">
-		<div class="row col-12 col-md-6 d-flex flex-wrap align-items-center justify-content-between featured-post">
-				<h2 class="title"> <?= get_sub_field('blog_title'); ?></h2>
+	<div class="<?php echo esc_attr( $container ); ?> d-flex flex-wrap">
+		<div class="col-12 col-lg-6 d-flex flex-wrap justify-content-between align-items-center featured-post pl-0 pt-5">
+				<h2 class="title mr-3 mb-5 mb-sm-0"> <?= get_sub_field('blog_title'); ?></h2>
 
+		<div class="d-flex flex-wrap">
+				<a href="<?=get_permalink(get_option('page_for_posts'));?>" class="blog-check-1 blog-check mb-5 mb-sm-0">
+					<?php echo get_sub_field('blog_link1') ?>
+				</a>
 
-			<a href="<?=get_permalink(get_option('page_for_posts'));?>"></a>
-                <?php
-                $link1 = get_sub_field('blog_link1');
-                if ($link1): ?>
-					<a class="blog-check blog-check-1" href="<?php echo $link1['url']; ?>"
-					   target="<?php echo $link1['target']; ?>">
-                        <?php echo $link1['title']; ?>
-					</a>
-                <?php endif; ?>
-
-                <?php
-                $link1 = get_sub_field('blog_link');
-                if ($link1): ?>
-					<a class="blog-check" href="<?php echo $link1['url']; ?>"
-					   target="<?php echo $link1['target']; ?>">
-                        <?php echo $link1['title']; ?>
-					</a>
-                <?php endif; ?>
-
+				<a href="<?=get_permalink(get_option('page_for_posts'));?>" class="blog-check ml-3 mb-5 mb-sm-0">
+					<?php echo get_sub_field('blog_link') ?>
+				</a>
+			</div>
 
 			<?php
 			$posts = get_field('relationship_post');
@@ -57,6 +44,9 @@ $container = get_theme_mod('understrap_container_type'); ?>
 			<?php wp_reset_postdata();?>
 			<?php endif; ?>
 
+		</div>
+		<div class="col-12 col-lg-6 p-0">
+			<img src="<?= get_sub_field('blog_image'); ?>" alt="" class="h-100">
 		</div>
 
 	</div>

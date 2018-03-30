@@ -1,7 +1,3 @@
-<?php get_header();
-
-	$container = get_theme_mod( 'understrap_container_type' );?>
-
 <?php
 /**
  * The template for displaying front-page.
@@ -9,6 +5,10 @@
  * @package understrap
  */
 ?>
+
+<?php get_header();
+
+$container = get_theme_mod( 'understrap_container_type' );?>
 
 <?php
 while (have_rows ('modules_home_page')) :the_row ();

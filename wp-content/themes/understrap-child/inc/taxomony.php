@@ -1,21 +1,21 @@
 <?php
 add_action( 'init', 'create_portfolio_taxonomies', 0 );
 
-// create two taxonomies, genres and writers for the post type "book"
+
 function create_portfolio_taxonomies() {
-    // Add new taxonomy, make it hierarchical (like categories)
+
     $labels = array(
-        'name'              => _x( 'Portfolio', 'taxonomy general name', 'understrap' ),
-        'singular_name'     => _x( 'Portfolio', 'taxonomy singular name', 'understrap' ),
-        'search_items'      => __( 'Search Portfolio item', 'understrap' ),
-        'all_items'         => __( 'All Portfolio items', 'understrap' ),
-        'parent_item'       => __( 'Parent Portfolio item', 'understrap' ),
-        'parent_item_colon' => __( 'Parent Portfolio item:', 'understrap' ),
-        'edit_item'         => __( 'Edit portfolio item', 'understrap' ),
-        'update_item'       => __( 'Update portfolio item', 'understrap' ),
-        'add_new_item'      => __( 'Add New portfolio item', 'understrap' ),
-        'new_item_name'     => __( 'New portfolio item name', 'understrap' ),
-        'menu_name'         => __( 'Portfolio taxonomy', 'understrap' ),
+        'name'              => _x( 'Industries', 'taxonomy general name', 'understrap' ),
+        'singular_name'     => _x( 'Industries', 'taxonomy singular name', 'understrap' ),
+        'search_items'      => __( 'Search Industry item', 'understrap' ),
+        'all_items'         => __( 'All Industry items', 'understrap' ),
+        'parent_item'       => __( 'Parent Industry item', 'understrap' ),
+        'parent_item_colon' => __( 'Parent Industry item:', 'understrap' ),
+        'edit_item'         => __( 'Edit Industry item', 'understrap' ),
+        'update_item'       => __( 'Update Industry item', 'understrap' ),
+        'add_new_item'      => __( 'Add New Industries item', 'understrap' ),
+        'new_item_name'     => __( 'New Industries item name', 'understrap' ),
+        'menu_name'         => __( 'Industries', 'understrap' ),
     );
 
     $args = array(
@@ -25,8 +25,12 @@ function create_portfolio_taxonomies() {
         'show_admin_column' => true,
         'update_count_callback' => '_update_post_term_count',
         'query_var'         => true,
-        'rewrite'           => array( 'slug' => 'portfolio' ),
+        'rewrite'           => array( 'slug' => 'industries' ),
     );
 
-    register_taxonomy( 'portfolio', array( 'portfolio' ), $args );
+    register_taxonomy( 'industries', array( 'projects' ), $args );
 }
+
+
+
+

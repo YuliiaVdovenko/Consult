@@ -34,20 +34,24 @@ $container = get_theme_mod( 'understrap_container_type' );
 				</li>
 				<li class="col-12 col-md-2">
 					<h2 class="footer-title"> Industry </h2>
+					<?php $terms = get_terms(  array (
+								'taxonomy' => 'industries',
+								'hide_empty' => false
+						));
+						if( $terms && ! is_wp_error($terms) ){ ?>
 					<ul class="d-flex flex-column">
-						<?php $terms = get_terms( 'portfolio' );
-						if( $terms && ! is_wp_error($terms) ){
+						<?php
 							foreach( $terms as $term ){ ?>
 								<li>
-									<a href="<?php the_permalink(); ?>" class="tel">
+									<a href="<?= get_term_link($term) ?>" class="tel">
 										<?= $term->name; ?>
 									</a>
 								</li>
 								<?php
 							}
-						}
 						?>
 					</ul>
+					<?php } ?>
 				</li>
 				<li class="col-12 col-md-2">
 					<h2 class="footer-title"> Follow us </h2>

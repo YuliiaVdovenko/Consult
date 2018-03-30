@@ -48,7 +48,7 @@ $container = get_theme_mod( 'understrap_container_type' );?>
 				</main>
 				<ul class="row flex-wrap">
 					<?php
-					$args1 = array(
+					$args = array(
 						'numberposts' => 3,
 						'offset' => 0,
 						'category' => 0,
@@ -63,16 +63,16 @@ $container = get_theme_mod( 'understrap_container_type' );?>
 						'post__not_in' => array(get_the_ID()),
 						'suppress_filters' => true
 					);
-					$recent_posts1 = wp_get_recent_posts($args1);
+					$recent_posts = wp_get_recent_posts($args);
 					?>
 
 
-						<?php foreach ($recent_posts1 as $recent_post) { ?>
+					<?php foreach ($recent_posts as $recent_post) { ?>
 					<li class="col-12 col-lg-4 recent">
 
-							<a href="<?php the_permalink($recent_post['ID']); ?>">
-								<?php echo get_the_post_thumbnail($recent_post['ID']); ?>
-							</a>
+						<a href="<?php the_permalink($recent_post['ID']); ?>">
+							<?php echo get_the_post_thumbnail($recent_post['ID']); ?>
+						</a>
 						<?php
 						$archive_year  = get_the_time('Y');
 						$archive_month = get_the_time('F');
@@ -83,17 +83,16 @@ $container = get_theme_mod( 'understrap_container_type' );?>
 								<?php echo date('d-M-Y', strtotime($recent_post['post_date']));?>
 							</time>
 						</a>
-							<h4>
-								<a href="<?= get_permalink($recent_post["ID"]) ?>" class="blog-title">
-									<?= $recent_post['post_title']; ?>
-								</a>
-							</h4>
+						<h4>
+							<a href="<?= get_permalink($recent_post["ID"]) ?>" class="blog-title">
+								<?= $recent_post['post_title']; ?>
+							</a>
+						</h4>
 						<?php } ?>
 					</li>
 				</ul>
 				<div class="comments-list">
 					<?php
-					// If comments are open or we have at least one comment, load up the comment template.
 					if ( comments_open() || get_comments_number() ) :
 						comments_template();
 					endif;
@@ -105,10 +104,9 @@ $container = get_theme_mod( 'understrap_container_type' );?>
                 <?php dynamic_sidebar('right-page-sidebar'); ?>
 			</aside>
 
-
 		</div>
-	</section>
 
+	</section>
 
 
 

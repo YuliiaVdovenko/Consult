@@ -1,7 +1,7 @@
 <?php
 $container   = get_theme_mod( 'understrap_container_type' );?>
 
-<section class="offer-section">
+<section class="offer-section pt-5 pb-5">
 	<div class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">
 		<h2 class="title"> <?= get_sub_field('service_title'); ?></h2>
         <?php if (have_rows ('image')): ?>

@@ -1,14 +1,14 @@
 <?php
 $container = get_theme_mod('understrap_container_type'); ?>
 
-<section class="clients-slider">
+<section class="clients-slider pt-5 pb-5">
 	<div class="<?php echo esc_attr( $container ); ?>">
 		<h3 class="title"> <?= get_sub_field('section_name') ?></h3>
 
         <?php
         $query = new WP_Query(array('post_type' => 'Comments'));
         if ($query->have_posts()) { ?>
-			<ul class="slider-for">
+			<ul class="slider-for pt-4">
                 <?php while ($query->have_posts()) {
                     $query->the_post(); ?>
 					<li class="item">
@@ -17,7 +17,6 @@ $container = get_theme_mod('understrap_container_type'); ?>
                 <?php } ?>
 			</ul>
             <?php
-        } else {
         }
         wp_reset_postdata();
 
@@ -36,7 +35,6 @@ $container = get_theme_mod('understrap_container_type'); ?>
                 <?php } ?>
 			</ul>
             <?php
-        } else {
         }
         wp_reset_postdata();
         ?>

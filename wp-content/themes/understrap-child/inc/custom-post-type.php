@@ -1,10 +1,6 @@
 <?php
 add_action( 'init', 'comments_register' );
-/**
- * Register a book post type.
- *
- * @link http://codex.wordpress.org/Function_Reference/register_post_type
- */
+
 
 function comments_register() {
     $labels = array(
@@ -44,39 +40,34 @@ function comments_register() {
 }
 
 add_action( 'init', 'portfolio_register' );
-/**
- * Register a book post type.
- *
- * @link http://codex.wordpress.org/Function_Reference/register_post_type
- */
 
 function portfolio_register() {
     $labels = array(
-        'name'               => _x( 'Portfolio', 'post type general name', 'understrap' ),
-        'singular_name'      => _x( 'Portfolio', 'post type singular name', 'understrap' ),
-        'menu_name'          => _x( 'Portfolio', 'admin menu', 'understrap' ),
-        'name_admin_bar'     => _x( 'Portfolio', 'add new on admin bar', 'understrap' ),
-        'add_new'            => _x( 'Add New Portfolio item', 'Portfolio member', 'understrap' ),
-        'add_new_item'       => __( 'Add New Portfolio item', 'understrap' ),
-        'new_item'           => __( 'New Portfolio item', 'understrap' ),
-        'edit_item'          => __( 'Edit Portfolio item', 'understrap' ),
-        'view_item'          => __( 'View Portfolio item', 'understrap' ),
-        'all_items'          => __( 'All Portfolio items', 'understrap' ),
-        'search_items'       => __( 'Search Portfolio items', 'understrap' ),
-        'parent_item_colon'  => __( 'Parent Portfolio items:', 'understrap' ),
-        'not_found'          => __( 'No Portfolio members found.', 'understrap' ),
-        'not_found_in_trash' => __( 'No Portfolio members found in Trash.', 'understrap' )
+        'name'               => _x( 'Projects', 'post type general name', 'understrap' ),
+        'singular_name'      => _x( 'Project', 'post type singular name', 'understrap' ),
+        'menu_name'          => _x( 'Projects', 'admin menu', 'understrap' ),
+        'name_admin_bar'     => _x( 'Projects', 'add new on admin bar', 'understrap' ),
+        'add_new'            => _x( 'Add New Project item', 'Portfolio member', 'understrap' ),
+        'add_new_item'       => __( 'Add New Project item', 'understrap' ),
+        'new_item'           => __( 'New Project item', 'understrap' ),
+        'edit_item'          => __( 'Edit Project item', 'understrap' ),
+        'view_item'          => __( 'View Project item', 'understrap' ),
+        'all_items'          => __( 'All Project items', 'understrap' ),
+        'search_items'       => __( 'Search Project items', 'understrap' ),
+        'parent_item_colon'  => __( 'Parent Project items:', 'understrap' ),
+        'not_found'          => __( 'No Projects found.', 'understrap' ),
+        'not_found_in_trash' => __( 'No Projects found in Trash.', 'understrap' )
     );
 
     $args = array(
         'labels'             => $labels,
-        'description'        => __( 'This is a list of Portfolio items', 'understrap' ),
+        'description'        => __( 'This is a list of Projects items', 'understrap' ),
         'public'             => true,
         'publicly_queryable' => true,
         'show_ui'            => true,
         'show_in_menu'       => true,
         'query_var'          => true,
-        'rewrite'            => array( 'slug' => 'Portfolio' ),
+        'rewrite'            => array( 'slug' => 'projects' ),
         'capability_type'    => 'post',
         'has_archive'        => true,
         'hierarchical'       => false,
@@ -84,5 +75,5 @@ function portfolio_register() {
         'supports'           => array( 'title', 'thumbnail')
     );
 
-    register_post_type( 'Portfolio', $args );
+    register_post_type( 'Projects', $args );
 }

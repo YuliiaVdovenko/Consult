@@ -9667,23 +9667,17 @@ p {
   line-height: 3rem;
   text-transform: uppercase;
   border-radius: 3rem;
-  display: inline-block;
-  margin-bottom: 2rem; }
+  display: inline-block; }
 
 .read-more:hover, .slider .more:hover {
   background-color: #ffac56;
   color: #fff; }
 
-.carousel-item {
-  margin: 0; }
-
 .slider {
   padding: 10rem 5rem 0 5rem; }
   .slider .industry-list {
-    background-color: #03b6e7;
-    padding: 0; }
+    background-color: #03b6e7; }
   .slider .slider-item {
-    padding: 0;
     border-bottom: 1px solid #fff; }
     @media (min-width: 768px) {
       .slider .slider-item {
@@ -9696,8 +9690,7 @@ p {
     text-align: center;
     border: none; }
   .slider .text {
-    background-color: #ffac56;
-    padding: 2rem; }
+    background-color: #ffac56; }
   .slider .slider-title {
     color: #fff;
     font-size: 1.3rem;
@@ -9729,14 +9722,11 @@ p {
   .slider .more:hover {
     background-color: #ffac56; }
 
-.about-section {
-  padding: 5rem 0; }
-  .about-section .about-text {
-    text-align: right; }
+.about-section .about-text {
+  text-align: right; }
 
 .offer-section {
-  background-color: #e7eff1;
-  padding: 4rem 0; }
+  background-color: #e7eff1; }
   .offer-section img {
     display: block;
     padding: 2rem 0; }
@@ -9753,30 +9743,27 @@ p {
     padding-bottom: 1rem; }
 
 .clients-slider {
-  padding: 5rem 0;
   background-color: #03b6e7;
   color: #fff; }
   .clients-slider .title p {
     color: #fff; }
     .clients-slider .title p span {
       color: #fff; }
-  .clients-slider .slider-for {
-    padding-top: 3rem; }
-    .clients-slider .slider-for .item {
-      display: flex;
-      align-items: center; }
-      .clients-slider .slider-for .item p {
-        color: #fff;
-        display: inline-block;
-        padding: 1rem; }
-    .clients-slider .slider-for .slick-slide:before, .clients-slider .slider-for .slick-slide:after {
-      content: "\201C";
-      display: inline-block;
+  .clients-slider .slider-for .item {
+    display: flex;
+    align-items: center; }
+    .clients-slider .slider-for .item p {
       color: #fff;
-      font-size: 10rem;
-      font-family: "Open Sans", sans-serif; }
-    .clients-slider .slider-for .slick-slide:after {
-      content: "\201D"; }
+      display: inline-block;
+      padding: 1rem; }
+  .clients-slider .slider-for .slick-slide:before, .clients-slider .slider-for .slick-slide:after {
+    content: "\201C";
+    display: inline-block;
+    color: #fff;
+    font-size: 10rem;
+    font-family: "Open Sans", sans-serif; }
+  .clients-slider .slider-for .slick-slide:after {
+    content: "\201D"; }
   .clients-slider .slider-nav .slick-dots li.slick-active button:before {
     color: #fff;
     font-size: 1rem; }
@@ -9797,14 +9784,11 @@ p {
   .clients-slider .slick-slide:focus {
     outline: 0 !important; }
 
-.featured-post {
-  padding-top: 2rem; }
-  .featured-post li {
-    padding-bottom: 1rem; }
-  .featured-post a, .featured-post time {
-    line-height: 1rem; }
-  .featured-post .title {
-    padding-bottom: 1rem; }
+.featured-post li {
+  padding-bottom: 1rem; }
+
+.featured-post .title {
+  padding-bottom: 1rem; }
 
 .blog-section {
   background-color: #e7eff1; }
@@ -9815,7 +9799,6 @@ p {
   border: 2px solid #838b8c;
   color: #838b8c;
   border-radius: 2rem;
-  margin-left: 2rem;
   text-transform: uppercase;
   text-align: center; }
 
@@ -9831,17 +9814,58 @@ p {
   font-size: 1.8rem;
   font-weight: 700;
   line-height: 3rem;
-  text-transform: uppercase;
-  letter-spacing: -0.9px; }
+  text-transform: uppercase; }
 
 .blog-time {
-  color: #16d428;
-  font-size: 1.5rem;
-  font-weight: 400;
-  line-height: 3rem; }
+  color: #16d428; }
+
+.img-border img {
+  width: 100%; }
+
+.hover-a {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  padding: 0.5rem 1rem;
+  text-transform: uppercase;
+  border: 1px solid #ffac56;
+  border-radius: 2rem; }
+
+.img-border {
+  position: relative; }
+
+.portfolio-hover {
+  display: none;
+  background-color: #ffac56;
+  opacity: 0.8;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  top: 0;
+  left: 0;
+  flex-flow: column;
+  text-align: center;
+  padding: 4rem; }
+  .portfolio-hover p {
+    font-size: 1.8rem;
+    color: #fff; }
+  .portfolio-hover a {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff; }
+
+.i-hover {
+  position: absolute;
+  bottom: 0;
+  border: 2rem solid transparent;
+  border-bottom: 2rem solid #03b6e7;
+  border-left: 2rem solid #03b6e7; }
+
+.div-hover:hover .portfolio-hover {
+  display: flex; }
 
 .contact-element {
-  padding: 2rem 3rem;
+  padding: 4rem 4rem;
   border: 1px solid #838b8c; }
 
 .contact-info {

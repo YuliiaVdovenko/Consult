@@ -33,7 +33,6 @@ p {
   text-transform: uppercase;
   border-radius: 3rem;
   display: inline-block;
-  margin-bottom: 2rem;
 }
 .read-more:hover {
   background-color: $primary;
@@ -43,18 +42,12 @@ p {
 //------------------- Slider Section -----------------
 
 
-.carousel-item {
-  margin: 0;
-}
-
 .slider {
   padding: 10rem 5rem 0 5rem;
   .industry-list {
     background-color: $second-color;
-    padding: 0;
   }
   .slider-item {
-    padding: 0;
     border-bottom: 1px solid $white;
     @media (min-width: 768px) {
       border-right: 1px solid $white;
@@ -72,7 +65,6 @@ p {
   }
   .text {
     background-color: $primary;
-    padding: 2rem;
   }
   .slider-title {
     color: $white;
@@ -118,7 +110,6 @@ p {
 //---------------Section About Us --------------
 
 .about-section{
-  padding: 5rem 0;
   .about-text {
     text-align: right;
   }
@@ -128,7 +119,6 @@ p {
 
 .offer-section {
   background-color: $back-grey;
-  padding: 4rem 0;
   img {
     display: block;
     padding: 2rem 0;
@@ -155,7 +145,6 @@ p {
 
 // ------------------- Clients Slider -----------------
 .clients-slider {
-  padding: 5rem 0;
   background-color: $second-color;
   color: $white;
   .title {
@@ -166,8 +155,7 @@ p {
       }
     }
   }
-  .slider-for {
-    padding-top: 3rem;
+  .slider-for {;
     .item {
       display: flex;
       align-items: center;
@@ -225,12 +213,8 @@ p {
 //--------------Our Blog Section -----------------
 
 .featured-post {
-  padding-top: 2rem;
   li {
     padding-bottom: 1rem;
-  }
-  a, time {
-    line-height: 1rem;
   }
   .title {
     padding-bottom: 1rem;
@@ -245,7 +229,6 @@ p {
   border: 2px solid $text-color;
   color: $text-color;
   border-radius: 2rem;
-  margin-left: 2rem;
   text-transform: uppercase;
   text-align: center;
 }
@@ -262,21 +245,70 @@ p {
   font-weight: 700;
   line-height: 3rem;
   text-transform: uppercase;
-  letter-spacing: -0.9px;
 }
 .blog-time {
   color: $green;
-  font-size: 1.5rem;
-  font-weight: 400;
-  line-height: 3rem;
 }
 
 
+
+//-------------------Projects Section -----------------
+
+.img-border {
+  img {
+    width: 100%;
+  }
+}
+.hover-a {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  padding: 0.5rem 1rem;
+  text-transform: uppercase;
+  border: 1px solid $primary;
+  border-radius: 2rem;
+}
+.img-border {
+  position: relative;
+}
+.portfolio-hover {
+  display: none;
+  background-color: $primary;
+  opacity: 0.8;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  top: 0;
+  left:0;
+  flex-flow: column;
+  text-align: center;
+  padding: 4rem;
+   p {
+    font-size: 1.8rem;
+    color: $white;
+  }
+  a {
+    font-size: 2rem;
+    font-weight: 700;
+    color: $white;
+  }
+}
+
+.i-hover {
+  position: absolute;
+  bottom:0;
+  border: 2rem solid transparent;
+  border-bottom: 2rem solid $second-color;
+  border-left: 2rem solid $second-color;
+}
+
+.div-hover:hover .portfolio-hover{
+  display: flex;
+}
 //----------Contact Section --------------
 
-
 .contact-element {
-  padding: 2rem 3rem;
+  padding: 4rem 4rem;
   border: 1px solid $text-color;
 }
 .contact-info {

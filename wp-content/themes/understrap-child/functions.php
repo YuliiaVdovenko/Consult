@@ -57,5 +57,7 @@ require_once('inc/custom-comments.php');
 require_once('inc/comments-function.php');
 
 
+add_post_type_support( 'projects', 'excerpt' );
+
 
 
