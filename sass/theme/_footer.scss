@@ -1,0 +1,86 @@
+
+// -------------- Footer Common Settings --------------------
+.footer {
+  background-color: $black;
+  .footer-nav {
+    padding-bottom: 5rem;
+    padding-top: 5rem;
+  }
+  .footer-title {
+    color: $white;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding-bottom: 2rem;
+  }
+  p {
+    color: $white;
+    padding-bottom: 2rem;
+    text-align: left;
+  }
+  a{
+    color: $white;
+    opacity: 0.5;
+    text-transform: uppercase;
+    padding: 0.5rem 0;
+  }
+  a:hover {
+    color: $primary;
+  }
+  .navbar {
+    padding: 0;
+  }
+}
+
+//------------- Mail Chimp -------------------
+
+.mc4wp-form-fields {
+    input {
+    padding: 1rem;
+  }
+  .email {
+    width: 70%;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    color: $white;
+    background-color: $text-color;
+    border: none;
+    margin: 0;
+    border-radius: 3rem;
+  }
+  .subscribe {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    color: $white;
+    border: none;
+    background-color: $green;
+    border-radius: 3rem;
+    margin-left: -5rem;
+    padding: 1rem 2rem;
+  }
+}
+
+
+
+// -------------------- Site Info + Footer Navigation ----------------
+.footer-background {
+  background-color: $second-color;
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.site-info {
+  border-top: 1px solid $text-color;
+  text-align: center;
+  padding: 1rem 0;
+  span {
+    color:$white;
+    font-size: 1.2rem;
+    opacity: 0.5;
+  }
+  time {
+    color:$white;
+    font-size: 1.2rem;
+    opacity: 0.5;
+  }
+}
+

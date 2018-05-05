@@ -1,0 +1,208 @@
+//-----------------------Blog page Style -----------------------
+
+.blog-name {
+	position: relative;
+	z-index: 1;
+	color: $black;
+	font-size: 4rem;
+	font-weight: 300;
+	line-height: 3rem;
+	text-transform: uppercase;
+	padding: 12rem 2rem;
+}
+
+.blog-name:before {
+	content: "";
+	padding: 3rem;
+	background-color: $primary;
+	border-radius: 50%;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	z-index: -1;
+	margin-left: -2rem;
+}
+
+.date-header {
+	position: absolute;
+	bottom: 0;
+}
+
+.blog-date {
+	color: $white;
+	text-transform: uppercase;
+	padding: 0.5rem 1rem;
+	display: inline-block;
+}
+
+.post-list {
+	padding-bottom: 4rem;
+	li {
+		padding: 2rem 0;
+		border-bottom: 1px solid $text-color;
+	}
+}
+
+.image-post-title {
+	position: relative;
+	img {
+		width: 100%;
+	}
+	.blog-date {
+		background-color: $primary;
+		display: inline-table;
+	}
+	.blog-date:hover {
+		color: $primary;
+		background-color: $black;
+	}
+	.img-title {
+		text-transform: uppercase;
+		background-color: $black;
+		padding: 0.5rem 1rem;
+		line-height: 1.6rem;
+		margin: 0;
+		a {
+			color: $white;
+			font-weight: 700;
+			line-height: 2rem;
+			@media (min-width: 567px) {
+				line-height: 3rem;
+				font-size: 1.6rem;
+			}
+			@media (min-width: 768px) {
+				line-height: 2rem;
+			}
+			@media (min-width: 992px) {
+				line-height: 3rem;
+				font-size: 1.8rem;
+			}
+		}
+	}
+}
+
+.excerpt-text {
+	padding-top: 2rem;
+	color: $text-color;
+	.blog-date {
+		color: $text-color;
+		display: flex;
+		align-items: center;
+		padding: 0;
+	}
+	.blog-date:hover {
+		color: $primary;
+	}
+	.excerpt-btn {
+		padding: 2rem 0;
+		width: 50%;
+		display: inline-block;
+		a:link, a:visited, a:focus, a:active {
+			font-size: 1.4rem;
+			background-color: $green;
+			color: $white;
+			text-transform: uppercase;
+			border: none;
+			border-radius: 3rem;
+			padding: 1rem 2rem;
+			display: inline-block;
+			border:none;
+			box-shadow: none;
+			transition: none;
+		}
+		a:hover {
+			background-color: $primary;
+		}
+		.btn:active, .btn:focus, .btn-secondary:focus, .btn-secondary:active {
+			border:none;
+			box-shadow: none!important;
+			transition: none;
+			background-color: $primary;
+			color: $white;
+		}
+	}
+	.addtoany_content {
+		margin: 0;
+		display: flex;
+		align-items: center;
+		a > span:hover {
+			color: $primary;
+		}
+	}
+}
+
+
+.audio {
+	.wp-playlist-current-item {
+		display: none;
+	}
+	.wp-playlist-playing {
+		display: none;
+	}
+	.wp-playlist {
+		border: none;
+		margin: 0;
+		padding: 1rem 0;
+	}
+	.mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-total,
+	.mejs-controls .mejs-time-rail .mejs-time-total {
+		background-color: $white;
+		border-radius: 1rem;
+	}
+	.mejs-controls .mejs-time-rail .mejs-time-loaded {
+		border-radius: 1rem;
+	}
+	.mejs-time-current, .mejs-time-hovered .negative .no-hover {
+		background-color: $primary !important;
+		border-radius: 1rem !important;
+	}
+	.mejs-container, .mejs-container .mejs-controls,
+	.mejs-embed, .mejs-embed body {
+		background-color: $back-grey;
+	}
+	.mejs-controls a.mejs-horizontal-volume-slider {
+		display: none!important;
+	}
+	.mejs-duration, .mejs-currenttime, .mejs-horizontal-volume-total {
+		display: none;
+	}
+}
+
+.quote > p:first-child {
+	background-color: $second-color;
+	color: $white;
+	padding: 3rem;
+	display: inline-flex;
+	&:before {
+		content: '\201C';
+		font-size: 7rem;
+	}
+	&:after {
+		content: '\201D';
+		font-size: 7rem;
+	}
+}
+
+//---------Pagination --------------------
+
+.nav-links {
+	padding-bottom: 3rem;
+	span {
+		font-size: 1.5rem;
+		padding: 0.5rem 1rem;
+		background-color: $green;
+		color: $white;
+		display: inline-block;
+	}
+	a {
+		font-size: 1.5rem;
+		padding: 0.5rem 1rem;
+		background-color: $primary;
+		color: $white;
+		display: inline-block;
+		margin: 0 1rem;
+	}
+	.next, .prev {
+		display: none;
+	}
+}

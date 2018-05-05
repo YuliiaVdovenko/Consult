@@ -1,0 +1,46 @@
+.top-header {
+	background-color: $black;
+	.link-header {
+		text-transform: uppercase;
+		color: $white;
+		opacity: 0.5;
+	}
+	.link-header:hover {
+		color: $primary;
+	}
+	.header-top-span {
+		text-transform: uppercase;
+		color: $white;
+		margin-bottom: 0;
+	}
+	.before-header:first-child {
+		@media (min-width: 556px) {
+			border-right: 1px solid $white;
+		}
+	}
+}
+.navbar {
+	li {
+		margin-right: 1rem;
+	}
+	.navbar-toggler {
+		background-color: $primary;
+		padding: 1rem 1.5rem;
+	}
+}
+#navbarNavDropdown {
+	.nav-link {
+		font-size: 1.6rem;
+		color: $black;
+		padding: 0.5rem 1rem;
+		text-transform: uppercase;
+	}
+	.nav-link:hover {
+		color: $green;
+	}
+	.active {
+		a:link, a:visited, a:hover {
+			color: $primary;
+		}
+	}
+}

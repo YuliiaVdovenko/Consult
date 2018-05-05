@@ -1,0 +1,158 @@
+
+//-------------Right Aside Bar ---------------
+
+
+.aside-title {
+  color: $black;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 1rem 0;
+}
+
+.sidebar {
+  padding-bottom: 4rem;
+  .aside-bar {
+    padding: 2rem 1rem;
+  }
+  .aside-bar:first-child {
+    padding-top: 0;
+  }
+  .aside-bar:last-child {
+    margin: 2rem 1rem;
+    padding: 4rem 3rem;
+    border: 1px solid $text-color;
+    .aside-title {
+      padding: 0 1rem;
+      text-align: center;
+    }
+  }
+  form {
+    padding-bottom: 2rem;
+    label {
+      color: $text-color;
+      line-height: 3rem;
+      text-transform: uppercase;
+      padding-bottom: 1rem;
+    }
+    .input-group {
+      border: 1px solid $text-color;
+      font-size: 1.5rem;
+      .submit {
+        background-color: transparent;
+        padding: 2rem;
+        border: none;
+      }
+    }
+    .field {
+      font-size: 1.4rem;
+      background-color: transparent;
+      color: $text-color;
+      border: none;
+      padding: 1rem 2rem;
+    }
+    .field:focus, .field:active, .btn:focus, .btn:active{
+      border:none;
+      box-shadow: none;
+      transition: none;
+    }
+    .search-i {
+      position: absolute;
+      top:50%;
+      transform: translateY(-50%);
+      right: 2rem;
+      color: $text-color;
+      z-index: -1;
+    }
+  }
+  ul {
+    color: $text-color;
+    .cat-item {
+      padding-bottom: 1rem;
+      a:before {
+        content: '\00BB';
+        color: $primary;
+        padding-right: 1rem;
+      }
+    }
+    a:link, a:visited {
+      color: $text-color;
+      font-size: 1.7rem;
+      &:hover {
+        color: $primary;
+      }
+    }
+  }
+
+
+//----------------Recent Post -------------------
+.rpwwt-widget {
+  img {
+    margin: 0;
+  }
+  li {
+    padding-bottom: 1.5rem;
+  }
+    .rpwwt-post-title {
+      display: inline-block;
+      padding-top: 1rem;
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: $black;
+      text-transform: uppercase;
+    }
+    .rpwwt-post-date {
+      font-size: 1.4rem;
+      color: $primary;
+      text-transform: uppercase;
+    }
+  }
+  .tagcloud {
+    a {
+      color: $white;
+      text-transform: uppercase;
+      padding: 1rem 2rem;
+      background-color: $green;
+      border-radius: 2rem;
+      margin-bottom: 1rem;
+      margin-right: 1rem;
+      display: inline-block;
+    }
+    a:hover {
+      background-color: $primary;
+    }
+  }
+
+  //----------Easy Mail Chimp --------------
+
+  .yikes-easy-mc-form {
+    padding-top: 2rem;
+    input[type="email"], input[type="text"] {
+      padding: 1rem;
+      background-color: transparent;
+      border: 1px solid $text-color;
+    }
+    button {
+      margin: 0;
+      color: $white;
+      background-color: $green;
+      border: none;
+      border-radius: 2rem;
+      &:hover {
+        background-color: $primary;
+    }
+    span {
+      font-size: 1.6rem;
+      line-height: 2.5rem;
+      text-transform: uppercase;
+    }
+  }
+    .btn:focus, .btn:active, .btn-primary:focus, .btn-primary:active {
+      border:none;
+      box-shadow: none;
+      transition: none;
+      background-color: $primary;
+      color: $white;
+    }
+  }
+}
+

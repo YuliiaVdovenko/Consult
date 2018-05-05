@@ -1,0 +1,177 @@
+
+//---------- Single POst --------------
+.single-content {
+	padding: 4rem 0;
+	p {
+		line-height: 3rem;
+		color: $text-color;
+	}
+	li {
+		padding: 0 2rem;
+		font-size: 1.4rem;
+		color: $text-color;
+		line-height: 3rem;
+		@media (min-width: 567px) {
+			padding: 0 5rem;
+		}
+	}
+	li:before {
+		content: "\2714";
+		font-size: 1.4rem;
+		color: $primary;
+		padding-right: 1rem;
+	}
+	.addtoany_content {
+		display: flex;
+		justify-content: flex-end;
+	}
+}
+.main-content {
+	.image-post-title {
+		padding-top: 2rem;
+	}
+	.post-title {
+		color: $white;
+		font-weight: 700;
+		line-height: 2rem;
+		font-size: 1.6rem;
+		@media (min-width: 567px) {
+			line-height: 3rem;
+		}
+		@media (min-width: 768px) {
+			line-height: 2rem;
+		}
+		@media (min-width: 992px) {
+			line-height: 3rem;
+			font-size: 1.8rem;
+		}
+	}
+}
+
+//-----------Related Post---------------
+
+.related-post-list {
+	border-top: 1px solid $back-grey;
+	padding: 3rem 0;
+}
+
+.related-post-title {
+	text-transform: uppercase;
+	font-weight: 700;
+}
+
+.recent-post-title {
+	line-height: 2rem;
+	a{
+		font-weight: 700;
+		font-size: 1.6rem;
+		color: $black;
+		text-transform: uppercase;
+	}
+}
+
+//---------------Comment List-----------------------
+
+.back {
+	background-color: $back-grey;
+}
+
+.comment-list {
+	padding-top: 2rem;
+	.children {
+		padding-left: 5rem;
+	}
+}
+
+.avatar {
+	img {
+		border-radius: 50%;
+		width: 60px;
+		max-width: 60px;
+	}
+}
+
+.comments-text {
+	padding-left: 1rem;
+	width: 100%;
+	p {
+		font-size: 1.5rem;
+		color: $black;
+		line-height: 2rem;
+		padding: 0.5rem 0;
+	}
+	.comment-author {
+		display: flex;
+		justify-content: space-between;
+		flex-flow: wrap;
+		a {
+			font-size: 1.5rem;
+			font-weight: bold;
+			color: $black;
+			&.comment-reply-link {
+				padding: 0.5rem 2rem;
+				background-color: $green;
+				color: $white;
+				border-radius: 2rem;
+			}
+		}
+	}
+}
+
+
+//---------------- Leave Comment Form --------------------
+
+.leave-comment-form {
+	input, textarea {
+		font-size: 1.4rem;
+		color: $black;
+		padding: 1.5rem;
+		border-bottom: 1px solid $black;
+		border-left: none;
+		border-top: none;
+		border-right: none;
+		border-radius: none;
+		background-color: transparent;
+	}
+	textarea {
+		height: 10rem;
+	}
+	input:focus, textarea:focus, input:active, textarea:active  {
+		box-shadow: none;
+		border-bottom: 1px solid $black;
+	}
+}
+.form-submit {
+	padding: 2rem 0;
+	.comment-button {
+		font-size: 1.6rem;
+		text-transform: uppercase;
+		background-color: $green;
+		color: $white;
+		cursor: pointer;
+		padding: 1rem 2rem;
+		text-align: center;
+		border: none;
+		border-radius: 2rem;
+	}
+}
+
+.comment-reply-title {
+	font-size: 1.8rem;
+	text-transform: uppercase;
+	margin: 3rem 0;
+	a:link, a:visited, a:hover {
+		display: inline-block;
+		color: $primary;
+		font-size: 1.5rem;
+		text-transform: none;
+		padding: 1rem 2rem;
+	}
+}
+
+.recent {
+	margin-bottom: 2rem;
+	img {
+		width: 100%;
+	}
+}
