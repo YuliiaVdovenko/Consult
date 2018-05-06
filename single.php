@@ -61,9 +61,11 @@ $container = get_theme_mod( 'understrap_container_type' );?>
 		</main>
 		
 		<div class="related-post-list">
-			<h2 class="related-post-title pb-5">
-				Related Post
-			</h2>
+			<?php if( get_field('related_posts_title',get_option('page_for_posts')) ): ?>
+				<h2 class="related-post-title pb-5">
+					<?php the_field('related_posts_title',get_option('page_for_posts')); ?>
+				</h2>
+			<?php endif; ?>
 			<ul class="row flex-wrap">
 
 				<?php
@@ -80,8 +82,21 @@ $container = get_theme_mod( 'understrap_container_type' );?>
 					'post_type' => 'post',
 					'post_status' => 'publish',
 					'post__not_in' => array(get_the_ID()),
-					'suppress_filters' => true
-				);
+					'suppress_filters' => true,
+					'tax_query' => array(
+						array(
+							'taxonomy' => 'post_format',
+							'field' => 'slug',
+							'terms' => 'post-format-audio',
+							'operator' => 'NOT IN'
+						),
+						array(
+							'taxonomy' => 'post_format',
+							'field' => 'slug',
+							'terms' => 'post-format-quote',
+							'operator' => 'NOT IN'
+						)
+					));
 				$recent_posts = wp_get_recent_posts($args);
 				?>
 
@@ -92,25 +107,34 @@ $container = get_theme_mod( 'understrap_container_type' );?>
 					<a href="<?php the_permalink($recent_post['ID']); ?>">
 						<?php echo get_the_post_thumbnail($recent_post['ID']); ?>
 					</a>
+					<h4 class="recent-post-title pt-3">
+						<a href="<?= get_permalink($recent_post["ID"]) ?>">
+							<?= $recent_post['post_title']; ?>
+						</a>
+					</h4>
 					<?php
 					$archive_year  = get_the_time('Y');
 					$archive_month = get_the_time('m');
 					$archive_day   = get_the_time('d');
 					?>
-					<a href="<?= get_day_link($archive_year, $archive_month, $archive_day); ?>" class="pt-3 d-inline-block" >
+					<a href="<?= get_day_link($archive_year, $archive_month, $archive_day); ?>" class="d-inline-block" >
 						<time datetime="<?php echo date('Y-m-d', strtotime($recent_post['post_date']));?>" >
 							<?php echo date('d-M-Y', strtotime($recent_post['post_date']));?>
 						</time>
 					</a>
-					<h4 class="recent-post-title">
-						<a href="<?= get_permalink($recent_post["ID"]) ?>">
-							<?= $recent_post['post_title']; ?>
-						</a>
-					</h4>
 					<?php } ?>
 				</li>
 			</ul>
 		</div>
+
+		<div class="pt-5 mt-5">
+			<?php
+			if ( comments_open() || get_comments_number() ) :
+				comments_template();
+			endif;
+			?>
+		</div>
+
 	</div>
 
 	<aside class="sidebar col-md-5 col-lg-4">
@@ -122,12 +146,8 @@ $container = get_theme_mod( 'understrap_container_type' );?>
 
 <section class="back">
 	<div class="<?php echo esc_attr( $container ); ?>">
-		<div class="padding-section">
-			<?php
-			if ( comments_open() || get_comments_number() ) :
-				comments_template();
-			endif;
-			?>
+		<div class="padding-section col-12 col-md-7 col-lg-8">
+			<?php comment_form(); ?>
 		</div>
 	</div>
 </section>

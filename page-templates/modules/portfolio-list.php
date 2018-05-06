@@ -37,7 +37,7 @@ $container   = get_theme_mod( 'understrap_container_type' );?>
 								<h3 class="project-name"> 
 									<?php echo get_the_title( $project_post->ID ); ?> 
 								</h3>
-								<p class="excerpt">
+								<p class="excerpt p-3">
 									<?php echo get_field ('description_of_project', $project_post->ID); ?>
 								</p>
 							</div>
@@ -121,7 +121,7 @@ $container   = get_theme_mod( 'understrap_container_type' );?>
 									<h3 class="project-name"> 
 										<?php echo get_the_title( $project_post->ID ); ?> 
 									</h3>
-									<p class="excerpt">
+									<p class="excerpt p-3">
 										<?php echo get_field ('description_of_project', $project_post->ID); ?>
 									</p>
 								</div>

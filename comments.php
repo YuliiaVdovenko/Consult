@@ -18,11 +18,11 @@ if ( post_password_required() ) {
 }
 ?>
 
-<div class="comments-area col-12 col-md-7 col-lg-8" id="comments">
+<div class="comments-area" id="comments">
 
 	<?php if ( have_comments() ) : ?>
 
-		<h2 class="section-title">
+		<h2 class="section-title pb-5">
 			
 			<?php
 				$comments_number = get_comments_number();

@@ -33,10 +33,10 @@ $container = get_theme_mod('understrap_container_type'); ?>
 				</h2>
 			<?php endif; ?>
 			<?php if (have_posts()) : ?>
-				<ul class="post-list">
+				<div class="post-list">
 					<?php while (have_posts()) : the_post();
 					if (get_post_format() == 'audio') { ?>
-					<li class="audio">
+					<article class="audio">
 						<?php the_content(); ?>
 						<div class="excerpt-text d-flex flex-wrap justify-content-between">
 							<?php the_excerpt(); ?>
@@ -52,10 +52,10 @@ $container = get_theme_mod('understrap_container_type'); ?>
 								</time>
 							</a>
 						</div>
-					</li>
+					</article>
 					<?php } else
 					if (get_post_format() == 'quote') { ?>
-					<li>
+					<article>
 						<div class="excerpt-text d-flex flex-wrap justify-content-between quote">
 							<?php the_excerpt(); ?>
 							<?php
@@ -69,9 +69,9 @@ $container = get_theme_mod('understrap_container_type'); ?>
 								</time>
 							</a>
 						</div>
-					</li>
+					</article>
 					<?php } else { ?>
-					<li>
+					<article>
 						<div class="image-post-title">
 							<a href="<?php the_permalink(); ?>">
 								<?php the_post_thumbnail(); ?>
@@ -97,12 +97,12 @@ $container = get_theme_mod('understrap_container_type'); ?>
 						<div class="excerpt-text d-flex flex-wrap justify-content-between">
 							<?php the_excerpt(); ?>
 						</div>
-					</li>
+					</article>
 					<?php } ?>
 				<?php endwhile;?>
-			</ul>
-			<div class="my-pagination">
-				<?php the_posts_pagination(); ?>
+			</div>
+			<div class="pagination mb-5">
+				<?php understrap_pagination () ; ?>
 			</div>
 		<?php endif;?>
 	</main>

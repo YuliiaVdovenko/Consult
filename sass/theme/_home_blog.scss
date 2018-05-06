@@ -29,15 +29,13 @@
 }
 
 .blog-date {
-	color: $white;
 	text-transform: uppercase;
-	padding: 0.5rem 1rem;
 	display: inline-block;
 }
 
 .post-list {
 	padding-bottom: 4rem;
-	li {
+	article {
 		padding: 2rem 0;
 		border-bottom: 1px solid $text-color;
 	}
@@ -49,8 +47,11 @@
 		width: 100%;
 	}
 	.blog-date {
+		color: $white;
+		padding: 0.5rem 1rem;
+		display: block;
+		width: 11rem;
 		background-color: $primary;
-		display: inline-table;
 	}
 	.blog-date:hover {
 		color: $primary;
@@ -88,6 +89,7 @@
 		color: $text-color;
 		display: flex;
 		align-items: center;
+		justify-content: center;
 		padding: 0;
 	}
 	.blog-date:hover {
@@ -185,24 +187,39 @@
 
 //---------Pagination --------------------
 
-.nav-links {
+.pagination {
 	padding-bottom: 3rem;
-	span {
-		font-size: 1.5rem;
-		padding: 0.5rem 1rem;
-		background-color: $green;
-		color: $white;
-		display: inline-block;
+		.pag-link,.pag-span {
+			color: $black;
+			text-transform: uppercase;
+			font-weight: 700;
+			font-size: 1.6rem;
+		}
+		.pag-link:hover {
+			color: $primary;
+			.next {
+				color: $green;
+			}
+			.prev {
+				color: $primary;
+			}
 	}
-	a {
-		font-size: 1.5rem;
-		padding: 0.5rem 1rem;
-		background-color: $primary;
-		color: $white;
-		display: inline-block;
-		margin: 0 1rem;
+	.next {
+		color: $primary;
+		font-size: 1.8rem;
+		margin-left: 1rem;
 	}
-	.next, .prev {
-		display: none;
+	.prev {
+		color: $green;
+		font-size: 1.8rem;
+		margin-right: 1rem;
+	}
+	.page-item {
+		padding-right: 1rem;
+		padding-left: 1rem;
+		border-right: 1px solid $text-color;
+	}
+	.page-item:last-child {
+		border-right: none;
 	}
 }

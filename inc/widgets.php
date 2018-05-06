@@ -55,7 +55,7 @@ if ( ! function_exists( 'understrap_widgets_init' ) ) {
             'description'   => '',
             'before_widget'  => '<div class="chimp">',
             'after_widget'   => '</div>',
-            'before_title'   => '<h2 class="footer-title">',
+            'before_title'   => '<h3 class="footer-title">',
             'after_title'    => '</h3>',
         ) );
 
@@ -65,7 +65,7 @@ if ( ! function_exists( 'understrap_widgets_init' ) ) {
 			'description'   => '',
 			'before_widget'  => '<div class="aside-bar">',
 			'after_widget'   => '</div>',
-			'before_title'   => '<h2 class="aside-title">',
+			'before_title'   => '<h3 class="aside-title">',
 			'after_title'    => '</h3>',
 		) );
 

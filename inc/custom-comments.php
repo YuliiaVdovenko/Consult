@@ -46,7 +46,7 @@ add_filter('comment_form_defaults', 'understrap_bootstrap_comment_form');
 function understrap_bootstrap_comment_form($args)
 {
     $args ['class_form'] = 'd-flex flex-column';
-    $args['title_reply'] = '<h3 class="section-title">' . __('Leave', 'understrap') . '<span class="section-subtitle">' . __('Message', 'understrap') . '</span> </h3>';
+    $args['title_reply'] = '<h2 class="section-title pb-5">' . __('Leave', 'understrap') . '<span class="section-subtitle">' . __('Message', 'understrap') . '</span> </h3>';
     $args['comment_field'] = '<div class="form-group leave-comment-form">
     <label for="comment" class="d-none">' . _x('Comment', 'noun', 'understrap') . (' <span class="required">*</span>') . '</label>
     <textarea class="form-control" id="comment" name="comment" aria-required="true" cols="45" rows="8" placeholder="' . __('Comment', 'understrap') . '"></textarea>

@@ -53,6 +53,7 @@
 .related-post-list {
 	border-top: 1px solid $back-grey;
 	padding: 3rem 0;
+	border-bottom: 1px solid $back-grey;
 }
 
 .related-post-title {
@@ -118,7 +119,11 @@
 	}
 }
 
-
+.comments-area {
+	.comment-respond {
+		display: none;
+	}
+}
 //---------------- Leave Comment Form --------------------
 
 .leave-comment-form {
@@ -139,6 +144,7 @@
 	input:focus, textarea:focus, input:active, textarea:active  {
 		box-shadow: none;
 		border-bottom: 1px solid $black;
+		background-color: transparent;
 	}
 }
 .form-submit {

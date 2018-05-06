@@ -47,10 +47,10 @@ $container = get_theme_mod( 'understrap_container_type' );
 								array(
 									'theme_location'  => 'taxonomy-menu',
 									'container_class' => 'd-flex',
-									'container_id'    => 'navbar-main',
+									'container_id'    => 'nav-tax-main',
 									'menu_class'      => 'column justify-content-between',
 									'fallback_cb'     => '',
-									'menu_id'         => 'main-menu',
+									'menu_id'         => 'taxonomy-menu',
 									'walker'          => new understrap_WP_Bootstrap_Navwalker(),
 								)
 								); ?>
@@ -67,10 +67,10 @@ $container = get_theme_mod( 'understrap_container_type' );
 									array(
 										'theme_location'  => 'social-links-menu',
 										'container_class' => 'd-flex',
-										'container_id'    => 'navbar-main',
+										'container_id'    => 'nav-social-main',
 										'menu_class'      => 'column justify-content-between',
 										'fallback_cb'     => '',
-										'menu_id'         => 'main-menu',
+										'menu_id'         => 'social-menu',
 										'walker'          => new understrap_WP_Bootstrap_Navwalker(),
 									)
 									); ?>

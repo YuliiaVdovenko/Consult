@@ -8,6 +8,15 @@
   @media (min-width: 992px) {
     padding: 10rem 2rem 0;
   }
+  @media (min-width: 1200px) {
+    padding: 15rem 2rem 0;
+  }
+  @media (min-width: 1400px) {
+    padding: 20rem 2rem 0;
+  }
+  @media (min-width: 1700px) {
+    padding: 30rem 2rem 0;
+  }
   .industry-list {
     background-color: $second-color;
   }
@@ -124,8 +133,11 @@
 .offer-section {
   background-color: $back-grey;
   .steps-image{
-    display: block;
-    padding: 2rem 0;
+    padding-top: 7rem;
+    background-position: top center;
+    @media (min-width: 768px) {
+      background-position: top left;
+    }
   }
   .image-offer {
     .step {
@@ -137,11 +149,6 @@
     .image-title {
       font-weight: bold;
       padding-bottom: 2rem;
-    }
-  }
-  .image-offer:last-child {
-    .steps-image {
-      padding-bottom: 1rem;
     }
   }
 }

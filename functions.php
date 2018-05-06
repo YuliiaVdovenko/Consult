@@ -50,12 +50,11 @@ require_once('inc/widgets.php');
 
 require_once('inc/tag_cloud.php');
 
-require_once('inc/navigation_markup_template.php');
-
 require_once('inc/custom-comments.php');
 
 require_once('inc/comments-function.php');
 
+require_once('inc/pagination.php');
 
 add_post_type_support( 'projects', 'excerpt' );
 
